@@ -1,23 +1,13 @@
 package br.com.devsdoagi.POO;
 
 public class ContaCorrente extends ContaBancaria{
-    private double limiteChequeEspecial;
 
-    public ContaCorrente(double limiteChequeEspecial) {
-        this.limiteChequeEspecial = limiteChequeEspecial;
+    public ContaCorrente(String titular, double saldo) {
+        super(titular, saldo);
     }
 
-    public double getLimiteChequeEspecial() {
-        return limiteChequeEspecial;
-    }
-
-    public void setLimiteChequeEspecial(double limiteChequeEspecial) {
-        this.limiteChequeEspecial = limiteChequeEspecial;
-    }
-
-    public void sacarComChequeEspecial(double valor) {
-        if(valor > 0 && valor <= limiteChequeEspecial) {
-            setSaldo(getSaldo() - valor);
-        }
+    @Override
+    public void gerarRelatorio() {
+        System.out.printf("Titular: %s, saldo: R$%.2f e taxa de manutenção de R$20,00\n", titular, saldo);
     }
 }
