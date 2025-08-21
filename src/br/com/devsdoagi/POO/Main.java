@@ -1,16 +1,15 @@
 package br.com.devsdoagi.POO;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        PagamentoBoleto p1 = new PagamentoBoleto();
-        PagamentoCartao p2 = new PagamentoCartao();
+        Conta c1 = new ContaCorrente(200, "12345");
+        Cartao c2 = new CartaoCredito("12345", 1000);
+        Cambio cam1 = new CambioDolar(200, 5.40);
+        Cambio cam2 = new CambioEuro(200, 6.37);
 
-        p1.processarPagamento(200);
-        p1.processarPagamento(600);
-
-
+        //c1.atualizarMensal()
+        //c2.processarCompra(348);
+        System.out.printf("Valor em dólar: %.2f\n", cam1.converter());
+        System.out.printf("Valor em euros: %.2f\n", cam2.converter());
     }
 }

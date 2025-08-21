@@ -1,13 +1,13 @@
 package br.com.devsdoagi.POO;
 
-public class ContaCorrente extends ContaBancaria{
+public class ContaCorrente extends Conta{
 
-    public ContaCorrente(String titular, double saldo) {
-        super(titular, saldo);
+    public ContaCorrente(double saldo, String numeroConta) {
+        super(saldo, numeroConta);
     }
 
     @Override
-    public void gerarRelatorio() {
-        System.out.printf("Titular: %s, saldo: R$%.2f e taxa de manutenção de R$20,00\n", titular, saldo);
+    public void atualizarMensal() {
+        System.out.printf("Houve um desconto de R$15 mensal, ficando com um saldo de: %.2f", saldo - 15);
     }
 }
