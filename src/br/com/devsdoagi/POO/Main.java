@@ -5,17 +5,12 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        ContaBancaria c1 = new ContaBancaria("Bruno", 1500);
-        ContaBancaria c2 = new ContaCorrente("Julia", 1600);
+        PagamentoBoleto p1 = new PagamentoBoleto();
+        PagamentoCartao p2 = new PagamentoCartao();
 
-        List<ContaBancaria> Contas = new ArrayList<>();
+        p1.processarPagamento(200);
+        p1.processarPagamento(600);
 
-        Contas.add(c1);
-        Contas.add(c2);
 
-        for(ContaBancaria conta : Contas ) {
-            conta.gerarRelatorio();
-        }
     }
 }
