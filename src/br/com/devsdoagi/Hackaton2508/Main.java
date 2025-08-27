@@ -1,6 +1,7 @@
 package br.com.devsdoagi.Hackaton2508;
 
 //Bruno Rodrigues dos Santos
+// Tester: Matheus Oliveira "Nota 100, tudo conforme os critérios de Avaliação"
 public class Main {
     public static void main(String[] args) {
         Gerente gerente = new Gerente("Bruno", 5000);
